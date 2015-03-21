@@ -1,0 +1,2 @@
+# simcoin
+Simcoin project
