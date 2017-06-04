@@ -1,0 +1,100 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+	<title>Simex</title>
+	<meta charset="utf-8">
+	<style>
+		body { font-family: Tahoma; font-size: 14px; padding: 1em 1em 0; width: 350px; }
+		
+		.center{ display: block; margin: 0px auto; }
+		
+		.header{ text-align: center; margin-bottom: 1em; }
+		
+		.header .header-title{ display: block; font-size: 1.5em; }
+		
+		.bl{ margin-bottom: 1em; }
+
+		a:visited{ color:blue; }
+		
+		table { width: 100%; border-spacing:0; }
+		th, td { padding: 0; }
+		th { text-align: left; }
+
+		#orders{ margin:10px auto; border:1px solid #ABC; border-collapse: collapse; }
+		
+		#orders td{ color:#555; padding:2px; font-weight:bold; font-size:12px; border:1px solid #FFF; line-height:20px; }
+		
+		#orders th{ background:#E0E5F5; padding:5px; font-size:13px; border:1px solid #FFF; text-align: center; }
+		
+		#orders tr.hdr{ background: #EDEDED; font-weight: normal; }
+		#orders tr.hdr th{ color: #689; padding:3px; font-size:12px; font-weight: normal; border-bottom:1px solid #CCC; }
+		
+		#orders tr:nth-of-type(even){ background:#F9F9F9; text-align:center; }
+		#orders tr:nth-of-type(odd) { background:#F4F4F4; text-align:center; }
+		
+		#orders th.buy { color:#5C8; border-left: 1px solid #89A; }
+		#orders th.sell{ color:#D85; border-right:1px solid #C9D0D9; }
+		
+		#orders td.price_b { color:#4B7; width:18%; border-left:  1px solid #ABC; }
+		#orders td.price_s { color:#C74; width:18%; border-right: 1px solid #C9D0D9; }
+		
+		#posts{ width: 350px; table-layout: fixed; }
+		#posts th{ color:#fff; background: #5af; font-size:11px; font-weight:normal; padding:2px 5px; border:1px solid #FFF; }
+		#posts td{ background: #F9F9F9; border:1px solid #FFF; padding:3px 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+		#posts .new-post td{ font-weight:bold; }
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img class="logo center" src="icon-64.png">
+		<span class="header-title">Simex</span>
+	</div>
+
+	<div class="bl">
+		<select id="currency" class="center">
+			<option value="satoshis">Satoshis / SIM</option>
+			<option value="usd">USD / 1M SIM</option>
+		</select>
+	</div>
+
+	<div class="bl">
+		<a href="https://simxchg.com:555/" target="_blank" id="visit-xchg">Visit exchange</a>
+	</div>
+
+<div class="bl">
+	<table id="orders">
+	<thead>
+	<tr>
+		<th colspan="2" class=sell style="width:50%; text-align:center">Sell</th><th colspan="2" class=buy style="text-align:center">Buy</th>
+	</tr>
+	<tr class=hdr>
+		<th>Amount</th><th class=sell>Price</th><th class=buy>Price</th><th>Amount</th>
+	</tr>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+</div>
+
+<div class="bl">
+	<div id="btc-to-usd"></div>
+</div>
+
+<div class="bl">
+	<a href="https://simtalk.org:444/" target="_blank" id="visit-forum">Visit forum</a>
+</div>
+
+<div class="bl">
+	<table id="posts">
+	<thead>
+	<tr><th>Board</th><th style="width:180px">Subject</th><th>Author</th></tr>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+</div>
+
+<script src="js/popup.js"></script>
+</body>
+</html>
